@@ -19,6 +19,7 @@
 
 !*.code-workspace
 !*.html
+!*fly.toml
 
 # !Makefile
 
