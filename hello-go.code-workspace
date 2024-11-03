@@ -23,7 +23,7 @@
                 "name": "go install",
                 "command": "go install .",
                 "auto": true
-            }
+            },
             {
                 "name": "go mod tidy",
                 "command": "go mod tidy",
