@@ -13,7 +13,7 @@ RUN go mod download && go mod verify
 COPY . .
 
 # Copy home.html to the desired location in the image
-COPY home.html home.html
+COPY home.html /usr/src/app/home.html
 
 # Build the application
 RUN go build -v -o /run-app .
