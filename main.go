@@ -5,10 +5,14 @@
 package main
 
 import (
+	_ "embed"
 	"flag"
 	"log"
 	"net/http"
 )
+
+//go:embed home.html
+var homeHTML string
 
 var addr = flag.String("addr", ":8080", "http service address")
 
@@ -22,7 +26,7 @@ func serveHome(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
 		return
 	}
-	http.ServeFile(w, r, "home.html")
+	w.Write([]byte(homeHTML))
 }
 
 func main() {
