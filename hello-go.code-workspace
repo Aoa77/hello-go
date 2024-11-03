@@ -1,0 +1,53 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "prettier.tabWidth": 4,
+        "prettier.printWidth": 88,
+        "prettier.trailingComma": "all",
+        "prettier.bracketSameLine": true,
+
+        "explorer.fileNesting.enabled": true,
+        "editor.wordWrap": "on",
+
+        "runTerminalCommand.commands": [
+            {
+                "name": "go build",
+                "command": "go build -o bin/hello-go",
+                "auto": true
+            },
+            {
+                "name": "go install",
+                "command": "go install .",
+                "auto": true
+            }
+            {
+                "name": "go mod tidy",
+                "command": "go mod tidy",
+                "auto": true
+            },
+            {
+                "name": "go run",
+                "command": "go run .",
+                "auto": true
+            },
+            {
+                "name": "go test",
+                "command": "go test .",
+                "auto": true
+            }
+        ]
+    },
+    "extensions": {
+        "recommendations": [
+            "adrianwilczynski.terminal-commands",
+            "esbenp.prettier-vscode",
+            "github.copilot-chat",
+            "mhutchie.git-graph",
+            "golang.go"
+        ]
+    }
+}
